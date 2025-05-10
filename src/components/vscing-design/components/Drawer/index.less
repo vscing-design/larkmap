@@ -1,0 +1,75 @@
+:root {
+  // 抽屉动画时间
+  --drawer-animation-duration: 300ms;
+}
+
+/* 遮罩 */
+.drawer-overlay-show {
+  animation: drawer-overlay-show var(--drawer-animation-duration);
+}
+.drawer-overlay-hide {
+  animation: drawer-overlay-hide var(--drawer-animation-duration);
+}
+
+// 遮罩层动画
+@keyframes drawer-overlay-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drawer-overlay-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* 内容 */
+.drawer-content-show {
+  animation: drawer-content-show var(--drawer-animation-duration);
+}
+.drawer-content-hide {
+  animation: drawer-content-hide var(--drawer-animation-duration);
+}
+
+// 抽屉动画
+@keyframes drawer-content-show {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes drawer-content-hide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+// @keyframes right-appear {
+//   from {
+//     right: calc(var(--drawer-wh) * -1);
+//   }
+//   to {
+//     right: 0;
+//   }
+// }
+// @keyframes right-disappear {
+//   from {
+//     right: 0;
+//   }
+//   to {
+//     right: calc(var(--drawer-wh) * -1);
+//   }
+// }

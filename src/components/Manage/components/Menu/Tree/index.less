@@ -1,0 +1,28 @@
+.treeNode {
+  .treeNodeMove {
+    display: none;
+  }
+  &:hover {
+    .treeNodeMove {
+      display: block;
+    }
+  }
+}
+.move-select-top,
+.move-select-bottom {
+  position: relative;
+}
+.move-select-top::before, .move-select-bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color-drag);
+}
+.move-select-top::before {
+  top: 0;
+}
+.move-select-bottom::after {
+  bottom: 0;
+}

@@ -1,0 +1,112 @@
+// TODO: 十六进制转hsl
+:root {
+  // 主背景颜色
+  --background-color-main: #FFFFFF;
+  // 底部背景颜色
+  --background-color-footer: #FAFAFA;
+  // 卡片背景颜色
+  --background-color-card: #F4F4F5;
+  // 次级卡片背景颜色
+  --background-color-subCard: #E4E4E7;
+  // 高亮按钮背景颜色
+  --background-color-button: #18181B;
+  // 拖动元素背景颜色
+  --background-color-drag: #2563EB29;
+
+  // 默认边框颜色
+  --border-color-default:#E4E4E7;
+  // 选中边框颜色
+  --border-color-active:#A1A1AA;
+  // 拖动边框颜色
+  --border-color-drag:#2563EB;
+
+  // 字体颜色
+  --font-color-title:#18181B;
+  --font-color-subTitle:#3F3F46;
+  --font-color-default:#71717A;
+  --font-color-desc:#A1A1AA;
+  --font-color-icon:#09090B;
+  --font-color-error:#DC2626;
+  --font-color-success:#16A34A;
+  --font-color-dark:#F4F4F5;
+
+  // 遮罩层颜色
+  --mask-color-main: #09090B66;
+
+  // 主卡片渐变色
+  --gradient-color-main: linear-gradient(180deg, #18181B 0%, #71717A 100%);
+  // 小卡片渐变色
+  --gradient-color-card: linear-gradient(180deg, #E4E4E7 0%, rgba(228, 228, 231, 0) 100%);
+
+  // 阴影
+  --shadow-color-layout: 0px 4px 12px 0px rgba(244, 244, 245, 0.64) inset, 0px 4px 10px -5px rgba(0, 0, 0, 0.06), 0px 12px 24px -5px rgba(0, 0, 0, 0.16);
+  // 遮罩层阴影
+  --shadow-color-mask: 0px 8px 24px 0px rgba(39, 39, 42, 0.64) inset, 0px 4px 10px -5px rgba(0, 0, 0, 0.50), 0px 12px 24px -5px rgba(0, 0, 0, 0.80); 
+}
+
+html.dark {
+  // 主背景颜色
+  --background-color-main:#09090B;
+  // 底部背景颜色
+  --background-color-footer:#18181B;
+  // 卡片背景颜色
+  --background-color-card:#18181B;
+  // 次级卡片背景颜色
+  --background-color-subCard: #27272A;
+  // 高亮按钮背景颜色
+  --background-color-button: #F4F4F5;
+  // 拖动元素背景颜色
+  --background-color-drag: #3B82F629;
+
+  // 默认边框颜色
+  --border-color-default:#27272A;
+  // 选中边框颜色
+  --border-color-active:#71717A;
+  // 拖动边框颜色
+  --border-color-drag:#3B82F6;
+
+  // 字体颜色
+  --font-color-title:#F4F4F5;
+  --font-color-subTitle:#D4D4D8;
+  --font-color-default:#A1A1AA;
+  --font-color-desc:#71717A;
+  --font-color-icon:#FFFFFF;
+  --font-color-error:#EF4444;
+  --font-color-success:#22C55E;
+  --font-color-dark:#18181B;
+
+  // 遮罩层颜色
+  --mask-color-main: #09090BA3;
+
+  // 主卡片渐变色
+  --gradient-color-main: linear-gradient(180deg, #F4F4F5 0%, #A1A1AA 100%);
+  // 小卡片渐变色
+  --gradient-color-card: linear-gradient(180deg, #27272A 0%, rgba(39, 39, 42, 0) 100%);
+
+  // 阴影
+  --shadow-color-layout: 0px 4px 12px 0px rgba(39, 39, 42, 0.64) inset, 0px 4px 10px -5px rgba(0, 0, 0, 0.50), 0px 12px 24px -5px rgba(0, 0, 0, 0.80);
+  // 遮罩层阴影
+  --shadow-color-mask: 0px 8px 24px 0px rgba(244, 244, 245, 0.64) inset, 0px 4px 10px -5px rgba(0, 0, 0, 0.06), 0px 12px 24px -5px rgba(0, 0, 0, 0.16);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+body {
+  font-family: PingFang SC, sans-serif;
+  line-height: 100%;
+  font-weight: 500;
+  font-style: normal;
+  color-scheme: light dark;
+  margin: 0;
+  padding: 0;
+}
+
+.vinput-placeholder::placeholder {
+  color: var(--font-color-default);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
